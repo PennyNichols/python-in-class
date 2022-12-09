@@ -46,3 +46,25 @@ user = {
 }
 for attribute in user.values():
     print(attribute, end=" ")
+print()
+user = {
+    'name' : 'daniel',
+    'surname' : 'smith',
+    'age' : 35
+}
+for attribute in user.items():
+    print(attribute, end=" ")
+print()
+user = {
+    'name' : 'daniel',
+    'surname' : 'smith',
+    'age' : 35
+}
+for attribute in user:
+    print(attribute, end=" ")
+
+
+number = input('Enter a number between 1 and 10 :')
+
+for i in range(0,11):
+    print('{}x{} = {}'.format(number,i,int(number)*i))
