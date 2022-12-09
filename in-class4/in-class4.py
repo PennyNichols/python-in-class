@@ -110,3 +110,21 @@ for i in range(len(arr)):
             # arr[i] = arr[j]
             # arr[j] = temp
 print(arr)
+
+#long
+squares = []
+for i in range(10):
+    squares.append(i * i)
+print(squares)
+
+squares2 = [i * i for i in range(10)]
+print(squares2)
+
+evens = []
+for n in range(12):
+    if n%2 == 0:
+        evens.append(n)
+print(evens)
+
+evens2 = [n for n in range(12) if n%2 == 0]
+print(evens2)
