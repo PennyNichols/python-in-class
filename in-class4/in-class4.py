@@ -32,39 +32,81 @@
 # print('the longest word in "{}" has {} letters.'.format(sentence, len(longest)))
 # print(type(len(longest)))
 
-var = 'Clarusway'
-edited = ''
-for i in var:
-    edited += "{}-".format(i)
+# var = 'Clarusway'
+# edited = ''
+# for i in var:
+#     edited += "{}-".format(i)
 
-print(edited.lower().rstrip("-"))
+# print(edited.lower().rstrip("-"))
 
-user = {
-    'name' : 'daniel',
-    'surname' : 'smith',
-    'age' : 35
-}
-for attribute in user.values():
-    print(attribute, end=" ")
-print()
-user = {
-    'name' : 'daniel',
-    'surname' : 'smith',
-    'age' : 35
-}
-for attribute in user.items():
-    print(attribute, end=" ")
-print()
-user = {
-    'name' : 'daniel',
-    'surname' : 'smith',
-    'age' : 35
-}
-for attribute in user:
-    print(attribute, end=" ")
+# user = {
+#     'name' : 'daniel',
+#     'surname' : 'smith',
+#     'age' : 35
+# }
+# for attribute in user.values():
+#     print(attribute, end=" ")
+# print()
+# user = {
+#     'name' : 'daniel',
+#     'surname' : 'smith',
+#     'age' : 35
+# }
+# for attribute in user.items():
+#     print(attribute, end=" ")
+# print()
+# user = {
+#     'name' : 'daniel',
+#     'surname' : 'smith',
+#     'age' : 35
+# }
+# for attribute in user:
+#     print(attribute, end=" ")
 
 
-number = input('Enter a number between 1 and 10 :')
+# number = input('Enter a number between 1 and 10 :')
 
-for i in range(0,11):
-    print('{}x{} = {}'.format(number,i,int(number)*i))
+# for i in range(0,11):
+#     print('{}x{} = {}'.format(number,i,int(number)*i))
+
+# text = ['one', 'two', 'three', 'four', 'five']
+# numbers = [1,2,3,4,5]
+
+# for x, y in zip(text,numbers):
+#     print(x, ':', y)
+
+numbers = range(1,11)
+evens = []
+odds = []
+for i in numbers:
+    if i%2 == 0:
+        evens.append(i)
+    else:
+        odds.append(i)
+print(evens)
+print(odds)
+
+
+arr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday']
+
+for index, i in enumerate(arr):
+    print(index, i)
+
+arr = [55, 22, 33, 11, 66, 5, 99, 48]
+
+# for i, ii in enumerate(arr):
+#     for j, jj in enumerate(arr[i+1:]):
+#         if ii > jj:
+#             temp = arr[i]
+#             arr[i] = arr[j+i+1]
+#             arr[j+i+1] = temp
+# print(arr)
+
+for i in range(len(arr)):
+    for j in range(i+1, len(arr)):
+        if arr[i] > arr[j]:
+            arr[i], arr[j] = arr[j], arr[i]
+            # temp = arr[i]
+            # arr[i] = arr[j]
+            # arr[j] = temp
+print(arr)
