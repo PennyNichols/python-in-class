@@ -128,3 +128,16 @@ print(evens)
 
 evens2 = [n for n in range(12) if n%2 == 0]
 print(evens2)
+
+names = ['Python', 'Aisha', 'Bulend', 'Ala', 'Ahmed']
+
+product = 1
+arr = [1,2,3,4,5]
+for i in arr:
+    product *= i
+
+result = []
+for i in arr:
+    result.append(product//i)
+
+print(result)
