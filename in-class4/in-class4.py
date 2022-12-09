@@ -102,42 +102,57 @@ arr = [55, 22, 33, 11, 66, 5, 99, 48]
 #             arr[j+i+1] = temp
 # print(arr)
 
-for i in range(len(arr)):
-    for j in range(i+1, len(arr)):
-        if arr[i] > arr[j]:
-            arr[i], arr[j] = arr[j], arr[i]
-            # temp = arr[i]
-            # arr[i] = arr[j]
-            # arr[j] = temp
-print(arr)
+# for i in range(len(arr)):
+#     for j in range(i+1, len(arr)):
+#         if arr[i] > arr[j]:
+#             arr[i], arr[j] = arr[j], arr[i]
+#             # temp = arr[i]
+#             # arr[i] = arr[j]
+#             # arr[j] = temp
+# print(arr)
 
-#long
-squares = []
-for i in range(10):
-    squares.append(i * i)
-print(squares)
+# #long
+# squares = []
+# for i in range(10):
+#     squares.append(i * i)
+# print(squares)
 
-squares2 = [i * i for i in range(10)]
-print(squares2)
+# squares2 = [i * i for i in range(10)]
+# print(squares2)
 
-evens = []
-for n in range(12):
-    if n%2 == 0:
-        evens.append(n)
-print(evens)
+# evens = []
+# for n in range(12):
+#     if n%2 == 0:
+#         evens.append(n)
+# print(evens)
 
-evens2 = [n for n in range(12) if n%2 == 0]
-print(evens2)
+# evens2 = [n for n in range(12) if n%2 == 0]
+# print(evens2)
 
-names = ['Python', 'Aisha', 'Bulend', 'Ala', 'Ahmed']
+# names = ['Python', 'Aisha', 'Bulend', 'Ala', 'Ahmed']
 
-product = 1
+# product = 1
+# arr = [1,2,3,4,5]
+# for i in arr:
+#     product *= i
+
+# result = []
+# for i in arr:
+#     result.append(product//i)
+
+# print(result)
+
 arr = [1,2,3,4,5]
-for i in arr:
-    product *= i
-
 result = []
-for i in arr:
-    result.append(product//i)
+for i in range(len(arr)):
+    product = 1
+    for j in range(len(arr)):
+        if i != j:
+            product *= arr[j]
+    result.append(product)
 
 print(result)
+
+
+lst = [1,2,3,4,5]
+print([[lst[j] for j in range(len(lst)) if i !=j] for i in range(len(lst))])
